@@ -1,0 +1,7 @@
+<launch>
+
+    <arg name="project" default="mypaper"/>
+    
+    <node pkg="$(arg project)" type="$(arg project)"   name="$(arg project)"    output="screen" 	respawn="false"/>
+
+</launch>

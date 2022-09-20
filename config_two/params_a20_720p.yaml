@@ -1,0 +1,51 @@
+mypaper:
+  #檔案路徑
+  image_filename: "/home/a123/Documents/catkin_ws/src/mypaper/data/vlp/images/a_720p.jpg"
+  pcd_filename: "/home/a123/Documents/catkin_ws/src/mypaper/data/vlp/pcd/a20_720p.pcd"
+
+  #棋盤格基本參數
+  chessboard_pattern_size:
+    width: 5
+    height: 7
+  board_dimensions:
+    width: 590
+    height: 840
+  square_length: 95
+  cb_translation_error:
+    x: 0.0
+    y: 0.0
+  
+  #相機參數
+  camera_size: 
+    width: 1280
+    height: 720
+  cameramat: [912.1228637695312, 0.0, 665.5498046875, 0.0, 909.9606323242188, 372.1570129394531, 0.0, 0.0, 1.0]
+  distcoeff: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+  #棋盤格在icp的初始預測矩陣,切割閥值,算出的3D3D轉換矩陣
+  counterclockwise:
+    x_min: 3.13
+    x_max: 3.25
+    y_min: 0.175
+    y_max: 1.13
+    z_min: -0.6
+    z_max: 0.37
+    icp_init_rotmat: [0.0, 0.7071067, -0.7071067, 0.0, -0.7071067, -0.7071067, -1.0, 0.0, 0.0]
+    icp_init_tranmat: [-0.5, 0.5, 3.0]
+    icp_rotmat: [0.974,-0.222, 0.037, 0.219, 0.974, 0.063,-0.050,-0.053, 0.997]
+    icp_tranmat: [-0.018,-0.121, 0.196]
+    r_2d: [1,0,3,2]
+    r_3d: [0,1,2,3]
+  clockwise:
+    x_min: 3.0
+    x_max: 3.11
+    y_min: -1.5
+    y_max: -0.55
+    z_min: -0.585
+    z_max: 0.44
+    icp_init_rotmat: [0.0, -0.7071067, -0.7071067, 0.0, -0.7071067, 0.7071067, -1.0, 0.0, 0.0]
+    icp_init_tranmat: [-0.5, -0.5, 4.0]
+    icp_rotmat: [0.977, 0.193, 0.089,-0.183, 0.976,-0.116,-0.109, 0.097, 0.989]
+    icp_tranmat: [0.040, 0.244,-0.289]
+    r_2d: [2,3,0,1]
+    r_3d: [0,1,2,3]

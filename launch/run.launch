@@ -1,0 +1,10 @@
+<launch>
+
+    <arg name="project" default="mypaper"/>
+    
+    <!-- Parameters -->
+    <rosparam file="$(find mypaper)/config_two/params_a20.yaml" command="load" />
+    
+    <node pkg="$(arg project)" type="$(arg project)_two"   name="$(arg project)_two"    output="screen" 	respawn="false"/>
+
+</launch>
